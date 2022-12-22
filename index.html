@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>welcome</title>
+        <title>Welcome to Aqua</title>
         <meta charset="utf-8"> 
         <meta name="author" content="Hege Refsnes">
         <style>
@@ -17,17 +17,23 @@
                 -o-background-size: cover;                
                 background-size: cover;
 	        }
+            p {
+                text-align:center;
+                font-size: 25px;
+                font-family:serif;
+                color: aqua;
+            }
             .search {
                 position: absolute;
                 border-radius: 5px;
-                top: 250px;
+                top: 750px;
                 left: 300px;
                 font-size: 50px;
             }
             .submit {
                 position: absolute;
                 border-radius: 5px;
-                top: 250px;
+                top: 750px;
                 left: 925px;
                 font-size: 45px;
                 background-color: #00bfff;
@@ -43,9 +49,15 @@
         </style>
     </head>
     <body>
-        <h1>Welcome to wayen1260's web</h1>
+        <h1>欢迎来到Aqua</h1>
+        <p>这是一个代码托管平台<br>你只需要把网站文件放在附件里发邮件至lxdszn@dingtalk.com即可<br>详见<a href="read.jpg">网站注册格式</a><br>永久免费，永久匿名</p>
+        <h1>可用域名推荐列表</h1>
+        <p>father175.github.io/server</p>
+        <p>father175.github.io/hello</p>
+        <p>father175.github.io/1x1</p>
+        <p>father175.github.io/在线</p>
         <form action="">
-            <input type="text" class="search" id="search" placeholder="search">
+            <input type="text" class="search" id="search" placeholder="跳转至服务器官网">
             <input type="submit" class="submit" onclick="game()">
         </form>
         <script>
@@ -53,8 +65,6 @@
                 var search = document.getElementById("search").value;
                 if(search==""){
                     alert("请输入内容");
-                }else if(search=="a"){
-                    open("https://father175.github.io/a.html");
                 }else{
                     open("https://father175.github.io/404.html");
                 }
