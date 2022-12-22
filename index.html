@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>welcome</title>
+        <meta charset="utf-8"> 
+        <meta name="author" content="Hege Refsnes">
+        <style>
+            h1 {
+                text-align:center;
+                font-size: 75px;
+                font-family:serif;
+                color: aqua;
+            }
+	        body{
+		        background: url("OIP-C.jpg") no-repeat center center;
+                -webkit-background-size: cover;
+                -o-background-size: cover;                
+                background-size: cover;
+	        }
+            .search {
+                position: absolute;
+                border-radius: 5px;
+                top: 250px;
+                left: 300px;
+                font-size: 50px;
+            }
+            .submit {
+                position: absolute;
+                border-radius: 5px;
+                top: 250px;
+                left: 925px;
+                font-size: 45px;
+                background-color: #00bfff;
+                color: #000000;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+            }
+            .submit:hover {
+                background-color: #00bfff00;
+                color: white;
+            }
+	</style>
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to wayen1260's web</h1>
+        <form action="">
+            <input type="text" class="search" id="search" placeholder="search">
+            <input type="submit" class="submit" onclick="game()">
+        </form>
+        <script>
+            function game() {
+                var search = document.getElementById("search").value;
+                if(search==""){
+                    alert("请输入内容");
+                }else if(search=="a"){
+                    open("https://father175.github.io/a.html");
+                }else{
+                    open("https://father175.github.io/404.html");
+                }
+            }
+        </script>
+    </body>
+</html>
