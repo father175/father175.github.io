@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Welcome to Aqua</title>
+        <link rel="shortcut icon" href="IN.jpg" >
         <meta charset="utf-8"> 
         <meta name="author" content="Hege Refsnes">
         <style>
@@ -12,7 +13,7 @@
                 color: aqua;
             }
 	        body{
-		        background: url("OIP-C.jpg") no-repeat center center;
+		        background: url("OIP-C.jpg") no-repeat center center  black;
                 -webkit-background-size: cover;
                 -o-background-size: cover;                
                 background-size: cover;
@@ -57,16 +58,16 @@
         <p>father175.github.io/1x1</p>
         <p>father175.github.io/在线</p>
         <form action="">
-            <input type="text" class="search" id="search" placeholder="跳转至服务器官网">
+            <input type="text" class="search" id="search" placeholder="填入网址">
             <input type="submit" class="submit" onclick="game()">
         </form>
         <script>
             function game() {
                 var search = document.getElementById("search").value;
                 if(search==""){
-                    alert("请输入内容");
+                    alert("ERROR\n请输入内容");
                 }else{
-                    open("https://father175.github.io/404.html");
+                    open("404.html");
                 }
             }
         </script>
