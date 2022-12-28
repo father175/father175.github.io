@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="icon.jpg">
+		<title>JS实践</title>
+		<script>
+			function dcookie(){
+				var  login = document.cookie.split('|');
+				var name=document.getElementById("name").value;
+				var password=document.getElementById("password").value;
+				if(login[0]==name&&login[1]==password){
+					document.getElementById('return').innerHTML='欢迎回来，游客'+name;
+				}else{
+					document.cookie = name+'|'+password;
+					document.getElementById('return').innerHTML='游客'+name+'已登录';
+				}
+			}
+		</script>
+		<style>
+			@font-face {
+			    font-family: "MC";
+			    src:url("Minecraft AE(支持中文).ttf");
+			    font-weight: normal;
+			    font-style: normal;
+			}
+			p {
+				font-family: "MC";
+				text-align: center;
+				font-size: 50px;
+				color: yellowgreen;
+			}
+			input {
+				border-radius:5px;
+				position: absolute;
+				font-size: 25px;
+			}
+			button {
+				border-radius:5px;
+				position: absolute;
+				font-size: 25px;
+			}
+			#name{
+				left: 625px;
+				top: 150px;
+			}
+			#password{
+				left: 625px;
+				top: 200px;
+			}
+			#submit{
+				left: 750px;
+				top: 250px;
+				background-color: blue;
+				color: white;
+				border: 2px solid blue;
+				transition-duration: 0.5s;
+			}
+			#submit:hover {
+			    background-color: white;
+			    color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<p>JS实践</p>
+		<input type="text" placeholder="用户名" id="name" autocomplete="off"/>
+		<input type="password" placeholder="密码" id="password" autocomplete="off"/>
+		<button type="submit" id="submit" onclick="dcookie()">提交</button>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<p id="return">开发者网站，访客勿入</p>
+	</body>
+</html>
