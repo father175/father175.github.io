@@ -17,7 +17,8 @@
 				}else if(login[0]==name&&login[1]==password){
 					document.getElementById('return').innerHTML='欢迎回来，游客'+name;
 				}else{
-					document.cookie = window.btoa(name+'|'+password);
+					document.cookie = window.btoa(name+'|'+password+'\n');
+					alert('写入'+window.btoa(name+'|'+password)+'\n'+document.cookie);
 					document.getElementById('return').innerHTML='游客'+name+'已登录';
 				}
 			}
