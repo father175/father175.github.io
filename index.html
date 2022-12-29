@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="shortcut icon" href="icon.jpg">
-		<title>cookie实践[1.4.5]</title>
+		<title>cookie实践[1.4.6]</title>
 		<script>
 			function dcookie(){
 				var name=document.getElementById("name").value;
 				var password=document.getElementById("password").value;
 				var  login = document.cookie;
-				login = login.split('=');
+				login = login.split('|');
 				if(name==""){
 					document.getElementById('return').innerHTML='请填写用户名';
 				}else if(password==""){
@@ -17,9 +17,9 @@
 				}else if(login[0]==window.btoa(name)&&login[1]==window.btoa(password)){
 					document.getElementById('return').innerHTML='欢迎回来，游客'+name;
 				}else{
-					alert('read:'+document.cookie);
-					document.cookie = window.btoa(name)+'='+window.btoa(password);
-					alert('want:'+window.btoa(name)+'='+window.btoa(password)+'\n'+'input:'+document.cookie);
+					alert(document.cookie+'\n'+window.btoa(name)+'|'+window.btoa(password)));
+					document.cookie = window.btoa(name)+'|'+window.btoa(password);
+					alert(document.cookie+'\n'+ window.btoa(name)+'|'+window.btoa(password));
 					document.getElementById('return').innerHTML='游客'+name+'已登录';
 				}
 			}
@@ -60,15 +60,15 @@
 			}
 			#name{
 				left: 600px;
-				top: 150px;
+				top: 175px;
 			}
 			#password{
 				left: 600px;
-				top: 200px;
+				top: 225px;
 			}
 			#submit{
 				left: 600px;
-				top: 250px;
+				top: 275px;
 				width: 300px;
 				background-color: blue;
 				color: white;
@@ -82,7 +82,7 @@
 		</style>
 	</head>
 	<body>
-		<h1>cookie实践[1.4.5]</h1>
+		<h1>cookie实践[1.4.6]</h1>
 		<input type="text" placeholder="用户名" id="name" autocomplete="off"/>
 		<input type="password" placeholder="密码" id="password" autocomplete="off"/>
 		<button type="submit" id="submit" onclick="dcookie()">提交</button>
