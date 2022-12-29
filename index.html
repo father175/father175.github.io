@@ -8,17 +8,18 @@
 			function dcookie(){
 				var name=document.getElementById("name").value;
 				var password=document.getElementById("password").value;
-				var  login = window.atob(document.cookie);
-				login = login.split(':');
+				var  login = document.cookie;
+				login = login.split('=');
 				if(name==""){
 					document.getElementById('return').innerHTML='请填写用户名';
 				}else if(password==""){
 					document.getElementById('return').innerHTML='请填写密码';
-				}else if(login[0]==name&&login[1]==password){
+				}else if(login[0]==window.btoa(name)&&login[1]==window.btoa(password)){
 					document.getElementById('return').innerHTML='欢迎回来，游客'+name;
 				}else{
-					document.cookie = window.btoa(name+'|'+password+'\n');
-					alert('写入'+window.btoa(name+'|'+password)+'\n'+document.cookie);
+					alert('read:'+document.cookie);
+					document.cookie = window.btoa(name)+'='+window.btoa(password);
+					alert('want:'+window.btoa(name)+'='+window.btoa(password)+'\n'+'input:'+document.cookie);
 					document.getElementById('return').innerHTML='游客'+name+'已登录';
 				}
 			}
