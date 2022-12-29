@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="shortcut icon" href="icon.jpg">
-		<title>cookie实践[1.4.6]</title>
+		<title>cookie实践[1.4.7]</title>
 		<script>
 			function dcookie(){
 				var name=document.getElementById("name").value;
@@ -17,9 +17,7 @@
 				}else if(login[0]==window.btoa(name)&&login[1]==window.btoa(password)){
 					document.getElementById('return').innerHTML='欢迎回来，游客'+name;
 				}else{
-					alert(document.cookie+'\n'+window.btoa(name)+'|'+window.btoa(password)));
 					document.cookie = window.btoa(name)+'|'+window.btoa(password);
-					alert(document.cookie+'\n'+ window.btoa(name)+'|'+window.btoa(password));
 					document.getElementById('return').innerHTML='游客'+name+'已登录';
 				}
 			}
@@ -82,7 +80,7 @@
 		</style>
 	</head>
 	<body>
-		<h1>cookie实践[1.4.6]</h1>
+		<h1>cookie实践[1.4.7]</h1>
 		<input type="text" placeholder="用户名" id="name" autocomplete="off"/>
 		<input type="password" placeholder="密码" id="password" autocomplete="off"/>
 		<button type="submit" id="submit" onclick="dcookie()">提交</button>
