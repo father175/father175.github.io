@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>翻墙工具</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+		<title>Quenna娱乐站(雾)</title>
+		<style>
+			h1 {
+				position:relative;
+				font-size: 50px;
+				color:black;
+				text-align:center;
+			}
+			#show {
+				position:absolute;
+				border:5px solid;
+				left:345px;
+				color: gray;
+				border-radius: 25px;
+			}
+		</style>
 		<script>
-			function get(){
-				var x=document.getElementById("input");
-				var y=document.getElementById("???");
-				fu=x.value;
-				y.setAttribute("src", fu);
+			function git(){
+				document.write(navigator.userAgent)
 			}
 		</script>
 	</head>
 	<body>
-		<form>
-			<input id="input">
-			<input type="submit" onclick="get()">
-		</form>
-		<IFRAME name="XXX" id="???" width=400cm height=500cm frameborder=0 src="https://baidu.com" ></IFRAME>
+		<div id="show">
+			<h1 onclick="git()">Quenna娱乐站(雾)</h1>
+		</div>
 	</body>
 </html>
