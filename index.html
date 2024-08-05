@@ -1,35 +1,56 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-		<title>Quenna娱乐站(雾)</title>
-		<style>
-			h1 {
-				position:relative;
-				font-size: 50px;
-				color:black;
-				text-align:center;
-			}
-			#show {
-				position:absolute;
-				border:5px solid;
-				left:345px;
-				color: gray;
-				border-radius: 25px;
-			}
-			body{
-				width: 1920px;
-			}
-		</style>
-		<script>
-			function git(){
-				document.write(navigator.userAgent)
-			}
-		</script>
-	</head>
-	<body>
-		<div id="show">
-			<h1 onclick="git()">Quenna娱乐站(雾)</h1>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=1.0, user-scalable=yes">
+<title>塔防游戏 Tower Defense</title>
+<meta name="keywords" content="塔防游戏，好玩的塔防游戏，炮塔防御2，塔防小游戏纪录" />
+<meta name="description" content="一张空白的地图，让怪兽按照你摆的炮塔的阵型来回移动，并且可以通过搭建和贱卖出口的炮塔，使怪兽来回移动，达到最长的移动距离，以便于炮塔不断的轰击怪兽。">
+<link href="a.min.css?v=1.1" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+<div id="main">
+<div id="ra">
+<ins class="adsbygoogle"
+     style="display:inline-block;width:180px;height:640px"
+     data-ad-client="ca-pub-5781698608883961"
+     data-ad-slot="9488232077"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div id="rb">
+    <h2>塔防游戏</h2>
+	<div id="td-wrapper">
+		<div style="display: none;" id="td-loading">加载中...</div>
+		<div style="display: block;" id="td-board">
+			<canvas style="width: 640px; height: 560px;" height="560" width="640" id="td-canvas2">抱歉，您的浏览器不支持 HTML 5 Canvas 标签，请使用 IE9 / Chrome / Opera 等浏览器浏览本页以获得最佳效果。</canvas><hr>			
 		</div>
-	</body>
-</html>
+		<script type="text/javascript" src="td-pkg-zh-min.js"></script>
+		<script type="text/javascript">
+			window.onload = function () {
+				_TD.init("td-board", true);
+				document.getElementById("td-loading").style.display = "none";
+				document.getElementById("td-board").style.display = "block";
+			};
+		</script>
+		<p style="text-align:left;"><b>怎么玩：</b>一张空白地图，让怪兽按照你摆的炮塔的阵型来回移动，可以通过搭建和贱卖炮塔，使怪兽来回移动，达到最长的移动距离，以便于炮塔不断的轰击怪兽。</p>
+		
+	</div>
+	
+</div><!--rb-->
+<div id="rc">
+<ins class="adsbygoogle"
+     style="display:inline-block;width:180px;height:640px"
+     data-ad-client="ca-pub-5781698608883961"
+     data-ad-slot="9488232077"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><!--rc-->
+<p id="copyright">2022 @ tafang123.com</p>
+</div>
+
+</div><!--mian-->	
+</div>
+</body></html>
