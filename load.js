@@ -63,7 +63,11 @@ function review(file){
 	document.getElementById("text").innerHTML=resule;
 }
 function into(sock){
-	url=url+"+"+sock;
+	if(url!=''){
+		url=url+"+"+sock;
+	}else{
+		url=sock;
+	}
 	appear(url_find(json))
 }
 function init(){
