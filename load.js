@@ -4,7 +4,7 @@ var cache={}
 async function load(file){
 	if (navigator.onLine) {
 		var web="Page was not found"
-		await fetch("https://raw.githubusercontent.com/father175/father175.github.io/main/"+file)
+		await fetch("https://father175.github.io/"+file)
 			.then(response => {
 				if (!response.ok) {
 				  throw new Error('Network response was not ok ' + response.statusText);
